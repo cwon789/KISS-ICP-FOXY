@@ -70,6 +70,9 @@ public:
 public:
     Vector3dVectorTuple RegisterFrame(const std::vector<Eigen::Vector3d> &frame,
                                       const std::vector<double> &timestamps);
+    Vector3dVectorTuple RegisterFrameWithWheel(const std::vector<Eigen::Vector3d> &frame,
+                                      const std::vector<double> &timestamps,
+                                      const Sophus::SE3d &init_guess);
     Vector3dVectorTuple Voxelize(const std::vector<Eigen::Vector3d> &frame) const;
 
     std::vector<Eigen::Vector3d> LocalMap() const { return local_map_.Pointcloud(); };

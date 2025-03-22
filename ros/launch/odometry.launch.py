@@ -39,7 +39,7 @@ class config:
     # Preprocessing
     max_range: float = 40.0
     min_range: float = 0.0
-    deskew: bool = True
+    deskew: bool = False
 
     #  Mapping parameters
     voxel_size: float = max_range / 100.0
